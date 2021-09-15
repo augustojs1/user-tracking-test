@@ -18,12 +18,19 @@ const handleKeyUp = (event) => {
 }
 
 document.addEventListener("click", handleClick);
-document.addEventListener("keypress", handleKey);
-const nome = document.querySelectorAll('.input');
-const nomes = Array.from(nome);
+// document.addEventListener("keypress", handleKey);
+// const nome = document.querySelectorAll('.input');
 
-nomes.forEach((nome) => {
-    nome.addEventListener('change', handleKeyUp);
+const inputs = Array.from(document.getElementsByTagName('input'));
+console.log(inputs);
+
+inputs.forEach((input) => {
+    input.addEventListener('change', handleKeyUp);
 });
+
+
+// nomes.forEach((nome) => {
+//     nome.addEventListener('change', handleKeyUp);
+// });
 
 
