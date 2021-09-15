@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tracking Test</title>
     <style>
+
         label, input {
             display: block;
         }
@@ -25,6 +26,30 @@
             border: none;
         }
 
+        .enviar {
+            padding: 0.5rem;
+            color: white;
+            background-color: teal;
+            border: none;
+        }
+
+        .record-btn {
+            cursor: pointer;
+            margin-top: 2rem;
+            padding: 0.7rem;
+            font-size: 0.8rem;
+            font-weight: bold;
+            border-radius: 3px;
+            color: white;
+            background-color: #FF2626;
+            border: 1px solid ;
+        }
+
+        .record-btn:hover {
+            color: #FF2626;
+            background-color: white;
+        }
+
     </style>
 </head>
 <body>
@@ -37,12 +62,16 @@
             </ul>
         </nav>
         <form>
-            <label for="nome">Nome</label> <input type="text" id="input-nome" class="input">
-            <label for="email">Email</label> <input type="text" id="input-email" class="input">
-            <label for="telefone">Telefone</label> <input type="text" id="input-telefone" class="input">
-            <button>Enviar!</button>
+            <label for="nome">Nome</label> <input type="text" id="input-nome" class="input nome text">
+            <label for="email">Email</label> <input type="text" id="input-email" class="input email text">
+            <label for="telefone">Telefone</label> <input type="text" id="input-telefone" class="input telefone text">
+            <button class="enviar">Enviar!</button>
         </form>
     </section>
+    <button class="record-btn">Record</button>
     <script type="module" src="main.js"></script>
+    <!-- <iframe src="https://materiais.ruralpago.com/seja-franqueado" height="500" width="500" >
+        <script type="module" src="main.js"></script>
+    </iframe> -->
 </body>
 </html>
