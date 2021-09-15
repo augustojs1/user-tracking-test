@@ -1,9 +1,9 @@
 import { userEvents } from "../../main.js";
 
-export const handleInputChange = (event) => {
-    userEvents.push({ target: event.target, type: event.type, value: event.target.value });
-    console.log(userEvents.forEach(({ value }) => console.log(value)));
-    
+export const handleInputChange = ({ target, type }) => {
+    userEvents.push({ target: { tag: target.localName, class: target.className, id: target.id }, type, value: target.value });
+
+    console.log(userEvents);
 }
 
 
