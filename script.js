@@ -1,4 +1,5 @@
 let userEvents = [];
+let userInputChange = [];
 
 const handleClick = ({ type, target }) => {
     userEvents.push({ type, target });
@@ -8,17 +9,21 @@ const handleClick = ({ type, target }) => {
 const handleKey = ({ type, target, key }) => {
     let keyValues = [];
 
-    userEvents.push(type, target, key);
+    userEvents.push({type, target, key});
 }
 
 const handleKeyUp = (event) => {
-    console.log(event);
+    userInputChange.push({ target: event.target, type: event.type, value: event.target.value });
+    console.log(userInputChange);
 }
 
 document.addEventListener("click", handleClick);
 document.addEventListener("keypress", handleKey);
-const nome = document.querySelector('#input-nome');
-console.log(nome);
-nome.addEventListener('change', handleKeyUp);
+const nome = document.querySelectorAll('.input');
+const nomes = Array.from(nome);
+
+nomes.forEach((nome) => {
+    nome.addEventListener('change', handleKeyUp);
+});
 
 
