@@ -31,8 +31,8 @@ const handleRecord = (event) => {
             input.removeEventListener('change', handleInputChange);
         });
       
-        console.log({ userevents: userEvents });
-        console.log(JSON.stringify({ userevents: userEvents }));
+        console.log({"userActions": userEvents });
+        return { "userActions": userEvents };
     }
 
     console.log('Gravandooo!');
